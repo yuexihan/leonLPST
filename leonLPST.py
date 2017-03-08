@@ -2,6 +2,14 @@ from __future__ import division
 from six.moves import xrange
 
 class LPSTree:
+	"""
+	LPSTree(n[, value=None[, reducef=None[, modulo=None]]]) -> new LPSTree
+
+	Build a new LPSTree with n elements.
+	If value is provided, all elements are set to value, otherwise 0.
+	Default reduce function is sum. Can alse be set to max or min.
+	If modulo is provide, modulo operation will be donw automatically.
+	"""
 	def __init__(self, n, value=None, reducef=None, modulo=None):
 		if n <= 0:
 			raise ValueError("n most be greater than 0")
@@ -88,6 +96,11 @@ class LPSTree:
 		# print tree, v, tree[2*v+1]
 
 	def get(self, start, stop):
+		"""
+		LPSTree.get(start, stop) -> value
+
+		You can assume it same as reduce(reducef, tree[start:stop]).
+		"""
 		n = self.n
 		if not(start < stop and start >=0 and stop <= n):
 			raise IndexError(start, stop)
@@ -114,6 +127,11 @@ class LPSTree:
 		return _get(start, stop, 0, 0, n)
 
 	def set(self, start, stop, value):
+		"""
+		LPSTRee.set(start, stop, value)
+
+		Set all elements in [start, stop) to value.
+		"""
 		n = self.n
 		if not(start < stop and start >=0 and stop <= n):
 			raise IndexError(start, stop)
@@ -146,6 +164,11 @@ class LPSTree:
 		_set(start, stop, 0, 0, n, value)
 
 	def add(self, start, stop, diff):
+		"""
+		LPSTRee.add(start, stop, diff)
+
+		Add diff to all elements in [start, stop).
+		"""
 		n = self.n
 		if not(start < stop and start >=0 and stop <= n):
 			raise IndexError(start, stop)
@@ -186,6 +209,11 @@ class LPSTree:
 		return repr([self[x] for x in xrange(self.n)])
 
 	def tolist(self):
+		"""
+		LPSTree.tolist() -> a list object
+
+		Return a list containing all the elements in LPSTree.
+		"""
 		return [self[x] for x in xrange(self.n)]
 
 if __name__ == '__main__':
