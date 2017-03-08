@@ -64,7 +64,7 @@ value::
 
 If you create a tree by setting the reduce function, then you will get the 
 reduced result of an interval according to the reduce function when you call
-get method. For example:
+get method. For example::
 
     >>> tree = leonLPST.LPSTree(10, reducef=max)
     >>> tree.add(0, 5, -2)
