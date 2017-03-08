@@ -14,7 +14,7 @@ setting the same value to all elements in the interval.
 
 LPST's computational complexity in doing interval updating or summation
 is O(logn), while that of normal array is O(n). So LPST can dramatically
-increase the speed of your programe.
+increase the speed of your program.
 
 Download and source code
 ========================
@@ -62,7 +62,7 @@ value::
     >>> tree
     [9, 9, 9, 9, 9, 9, 9, 9, 9, -1, 1, 1, 1, 1, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11]
 
-If you create a tree by setting the reduce function, then you will get the 
+If you have set the reduce function when creating, then you will get the 
 reduced result of an interval according to the reduce function when you call
 get method. For example::
 
